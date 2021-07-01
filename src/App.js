@@ -1,12 +1,9 @@
 import "./App.css";
 import { v4 as uuidv4 } from "uuid";
+import Hero from "./components/reusableComponents/Hero";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Welcome</h1>
-    </div>
-  );
+  return <Hero />;
 }
 
 export default App;
