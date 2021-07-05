@@ -7,7 +7,12 @@ import ShoeData from "./Shoe";
 function Card() {
   return (
     <>
-      <p>Card</p>
+      {ShoeData.map((shoe, index) => (
+        <div key={index} className="card">
+          <CardBg shoeImg={shoe.cardImg} />
+          <CardInfo shoePrice={shoe.cardPrice} />
+        </div>
+      ))}
     </>
   );
 }

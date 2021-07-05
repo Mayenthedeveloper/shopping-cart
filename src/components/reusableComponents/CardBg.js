@@ -1,10 +1,10 @@
 import React from "react";
 
-function CardBg() {
+function CardBg({ shoeImg }) {
   return (
     <div>
       <div className="cardBg">
-        <img src="" alt="" />
+        <img src={shoeImg} alt="shoe" />
       </div>
     </div>
   );
