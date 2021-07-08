@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "./Container";
 
-function Nav() {
+function Nav({ hiddenMenu, sethiddenMenu, itemCount }) {
   return (
     <nav>
       <Container>
