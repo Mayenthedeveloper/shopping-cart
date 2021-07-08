@@ -1,12 +1,12 @@
 import React from "react";
 import Button from "./Button";
 
-function CardInfo() {
+function CardInfo({ shoePrice, updateCart }) {
   return (
     <div>
       <div className="cardInfo">
-        <p>Price</p>
-        <Button />
+        <p>${shoePrice}</p>
+        <Button addItem={updateCart} />
       </div>
     </div>
   );
