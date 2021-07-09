@@ -1,6 +1,6 @@
 import React from "react";
 
-function ShoppingCart({ cartItem }) {
+function ShoppingCart({ cartItem, removeItem }) {
   return (
     <div className="shoppingCart">
       {cartItem.map((item) => (
@@ -11,6 +11,7 @@ function ShoppingCart({ cartItem }) {
           </div>
           <div className="cartPrice">
             <p>{item.price}$</p>
+            <i onClick={() => removeItem(item.id)} className="fas fa-times"></i>
           </div>
         </div>
       ))}

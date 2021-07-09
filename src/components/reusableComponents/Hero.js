@@ -31,6 +31,22 @@ function Hero() {
     ]);
   };
 
+  const removeItem = (id) => {
+    const newItems = cartItem.filter((cartItem) => cartItem.id !== id);
+    setCartItem(newItems);
+
+    const itemCountResult = newItems.reduce(
+      (acc, val) => (acc += val.cartCount),
+      0
+    );
+    setitemCount(itemCountResult);
+    const priceResult = newItems.reduce(
+      (acc, val) => (acc += val.price * val.cartCount),
+      0
+    );
+    setTotalPrice(priceResult);
+  };
+
   return (
     <div>
       <section className="hero">
@@ -46,6 +62,7 @@ function Hero() {
             cartItem={cartItem}
             totalPrice={totalPrice}
             itemCount={itemCount}
+            removeItem={removeItem}
           />
         </Container>
       </section>
